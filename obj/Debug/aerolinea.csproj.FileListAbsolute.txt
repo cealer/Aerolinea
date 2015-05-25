@@ -1,0 +1,13 @@
+c:\users\cesar\documents\visual studio 2012\Projects\aerolinea\bin\Debug\aerolinea.exe.config
+c:\users\cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea.csprojResolveAssemblyReference.cache
+c:\users\cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea.avion.resources
+c:\users\cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea.Form1.resources
+c:\users\cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea.Properties.Resources.resources
+c:\users\cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea.csproj.GenerateResource.Cache
+c:\users\cesar\documents\visual studio 2012\Projects\aerolinea\bin\Debug\aerolinea.exe
+c:\users\cesar\documents\visual studio 2012\Projects\aerolinea\bin\Debug\aerolinea.pdb
+c:\users\cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea.exe
+c:\users\cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea.pdb
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\bin\Debug\IrisSkin2.dll
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea.Formularios.Avion.resources
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea.Formularios.Boleto.resources

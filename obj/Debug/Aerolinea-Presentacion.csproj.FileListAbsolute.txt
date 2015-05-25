@@ -1,0 +1,43 @@
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea-Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea.avion.resources
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea.Form1.resources
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea.Formularios.Avion.resources
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea.Formularios.Boleto.resources
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea.Properties.Resources.resources
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea-Presentacion.csproj.GenerateResource.Cache
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea.exe
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\bin\Debug\aerolinea.exe.config
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\bin\Debug\aerolinea.exe
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\bin\Debug\aerolinea.pdb
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\bin\Debug\IrisSkin2.dll
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea.pdb
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\bin\Debug\Aerolinea-AccesoDatos.dll
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\bin\Debug\Aerolinea-AccesoDatos.pdb
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\bin\Debug\Aerolinea-Entidades.dll
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\bin\Debug\Aerolinea-Entidades.pdb
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\bin\Debug\Aerolinea-LogicaNegocio.dll
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\bin\Debug\Aerolinea-LogicaNegocio.pdb
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea.Formularios.Destino.resources
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\obj\Debug\aerolinea.Formularios.Vuelo.resources
+C:\aerolinea\bin\Debug\aerolinea.exe.config
+C:\aerolinea\obj\Debug\aerolinea.exe
+C:\aerolinea\obj\Debug\aerolinea.pdb
+C:\aerolinea\bin\Debug\aerolinea.exe
+C:\aerolinea\bin\Debug\aerolinea.pdb
+C:\aerolinea\bin\Debug\Aerolinea-Entidades.dll
+C:\aerolinea\bin\Debug\Aerolinea-LogicaNegocio.dll
+C:\aerolinea\bin\Debug\Aerolinea-AccesoDatos.dll
+C:\aerolinea\bin\Debug\Aerolinea-Entidades.pdb
+C:\aerolinea\bin\Debug\Aerolinea-LogicaNegocio.pdb
+C:\aerolinea\bin\Debug\Aerolinea-AccesoDatos.pdb
+C:\aerolinea\obj\Debug\Aerolinea-Presentacion.csprojResolveAssemblyReference.cache
+C:\aerolinea\obj\Debug\aerolinea.avion.resources
+C:\aerolinea\obj\Debug\aerolinea.Form1.resources
+C:\aerolinea\obj\Debug\aerolinea.Formularios.Avion.resources
+C:\aerolinea\obj\Debug\aerolinea.Formularios.Boleto.resources
+C:\aerolinea\obj\Debug\aerolinea.Formularios.Destino.resources
+C:\aerolinea\obj\Debug\aerolinea.Formularios.Vuelo.resources
+C:\aerolinea\obj\Debug\aerolinea.Properties.Resources.resources
+C:\aerolinea\obj\Debug\Aerolinea-Presentacion.csproj.GenerateResource.Cache
+C:\aerolinea\obj\Debug\aerolinea.Formularios.fAsiento.resources
+C:\aerolinea\obj\Debug\aerolinea.Formularios.Pasajero.resources

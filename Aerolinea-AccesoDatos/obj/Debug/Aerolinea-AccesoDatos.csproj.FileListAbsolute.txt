@@ -1,0 +1,16 @@
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-AccesoDatos.dll
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-AccesoDatos.pdb
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-AccesoDatos\obj\Debug\Aerolinea-AccesoDatos.csprojResolveAssemblyReference.cache
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-AccesoDatos\obj\Debug\Aerolinea-AccesoDatos.dll
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-AccesoDatos\obj\Debug\Aerolinea-AccesoDatos.pdb
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-Entidades.dll
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-Entidades.pdb
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-AccesoDatos.dll.config
+C:\aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-AccesoDatos.dll.config
+C:\aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-AccesoDatos.dll
+C:\aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-AccesoDatos.pdb
+C:\aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-Entidades.dll
+C:\aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-Entidades.pdb
+C:\aerolinea\Aerolinea-AccesoDatos\obj\Debug\Aerolinea-AccesoDatos.csprojResolveAssemblyReference.cache
+C:\aerolinea\Aerolinea-AccesoDatos\obj\Debug\Aerolinea-AccesoDatos.dll
+C:\aerolinea\Aerolinea-AccesoDatos\obj\Debug\Aerolinea-AccesoDatos.pdb

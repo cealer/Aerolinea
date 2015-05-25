@@ -1,0 +1,18 @@
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-LogicaNegocio.dll
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-LogicaNegocio.pdb
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-LogicaNegocio\obj\Debug\Aerolinea-LogicaNegocio.dll
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-LogicaNegocio\obj\Debug\Aerolinea-LogicaNegocio.pdb
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-LogicaNegocio\obj\Debug\Aerolinea-LogicaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-AccesoDatos.dll
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-Entidades.dll
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-AccesoDatos.pdb
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-Entidades.pdb
+C:\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-LogicaNegocio.dll
+C:\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-LogicaNegocio.pdb
+C:\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-AccesoDatos.dll
+C:\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-Entidades.dll
+C:\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-AccesoDatos.pdb
+C:\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-Entidades.pdb
+C:\aerolinea\Aerolinea-LogicaNegocio\obj\Debug\Aerolinea-LogicaNegocio.csprojResolveAssemblyReference.cache
+C:\aerolinea\Aerolinea-LogicaNegocio\obj\Debug\Aerolinea-LogicaNegocio.dll
+C:\aerolinea\Aerolinea-LogicaNegocio\obj\Debug\Aerolinea-LogicaNegocio.pdb

@@ -1,0 +1,9 @@
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-Entidades\bin\Debug\Aerolinea-Entidades.dll
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-Entidades\bin\Debug\Aerolinea-Entidades.pdb
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-Entidades\obj\Debug\Aerolinea-Entidades.dll
+C:\Users\Cesar\documents\visual studio 2012\Projects\aerolinea\Aerolinea-Entidades\obj\Debug\Aerolinea-Entidades.pdb
+C:\aerolinea\Aerolinea-Entidades\bin\Debug\Aerolinea-Entidades.dll
+C:\aerolinea\Aerolinea-Entidades\bin\Debug\Aerolinea-Entidades.pdb
+C:\aerolinea\Aerolinea-Entidades\obj\Debug\Aerolinea-Entidades.csprojResolveAssemblyReference.cache
+C:\aerolinea\Aerolinea-Entidades\obj\Debug\Aerolinea-Entidades.dll
+C:\aerolinea\Aerolinea-Entidades\obj\Debug\Aerolinea-Entidades.pdb
