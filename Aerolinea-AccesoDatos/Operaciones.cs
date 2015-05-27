@@ -155,6 +155,28 @@ namespace Aerolinea_AccesoDatos
       }
 
 
+      public DataTable SelectAllCondicional<unknowtype>(unknowtype Entities, string Buscar,string where)
+      {
+          StringBuilder innerjoin = new StringBuilder();
+          string Table = getTable(Entities);
+          var atributos = Entities.GetType().GetMethods();
+          var getAtributos = atributos.Where(x => x.Name.Contains("get"));
+          int max = getAtributos.Count();
+          foreach (var item in getAtributos)
+          {
+              if (!item.Name.Contains("Id" + Table) && item.Name.Contains("Id"))
+              {
+                  innerjoin.Append(" INNER JOIN " + Regex.Replace(item.Name, "get_Id", "") + " ON " + Table + "." + Regex.Replace(item.Name, "get_", "") + " = " + Regex.Replace(item.Name, "get_Id", "") + "." + Regex.Replace(item.Name, "get_", ""));
+              }
+          }
+          string consulta = "Select " + Buscar + " From " + Table + innerjoin.ToString()+where;
+          SqlDataAdapter adapter = new SqlDataAdapter(consulta, cn);
+          DataSet ds = new DataSet();
+          adapter.Fill(ds, Table);
+          return ds.Tables[0];
+      }
+
+
       public void Delete<unknowtype>(unknowtype Entities,int id) {
           string Table = getTable(Entities);
           string consulta = "DELETE FROM "+ Table +" WHERE Id"+ Table +"= @Id"+Table;

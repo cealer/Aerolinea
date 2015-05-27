@@ -98,7 +98,10 @@ namespace aerolinea.Formularios
 
         private void Destino_Load(object sender, EventArgs e)
         {
-            
+            if (enviarDatos==true)
+            {
+                OpcionesVistaBuscar();
+            }
             LlenarDatagriew();
             //Obtener Todos los campos de la tabla X
             var lista = _destinoBol.LlenarCombo(aux);
@@ -133,13 +136,19 @@ namespace aerolinea.Formularios
             Limpiar();
         }
 
-
+        void OpcionesVistaBuscar() {
+            tabControl1.TabPages.RemoveAt(0);
+            contextMenuStrip1.Enabled = false;
+            contextMenuStrip1.Dispose();
+        }
 
         private void dgvDestino_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (enviarDatos==true)
             {
+                enviarDatos = false;
                 int id = Convert.ToInt32(dgvDestino.CurrentRow.Cells[0].Value.ToString());
+                
                 aux = _destinoBol.ObtenerPorId(aux, id);
                 try
                 {

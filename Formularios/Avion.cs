@@ -14,7 +14,7 @@ namespace aerolinea.Formularios
 {
     public partial class Avion : Form
     {
-        EAvion aux;
+       public static EAvion aux;
         //
         private readonly AvionBOL  _avionBol = new AvionBOL();
 
@@ -60,10 +60,22 @@ namespace aerolinea.Formularios
         }
 
         public static bool enviarDatos = false;
-
+       
+        void OpcionesVistaBuscar()
+        {
+            tabControl1.TabPages.RemoveAt(0);
+            cmsOperaciones.Enabled = false;
+            cmsOperaciones.Dispose();
+        }
+        
         private void Avion_Load(object sender, EventArgs e)
         {
-            
+
+            if (enviarDatos==true)
+            {
+                OpcionesVistaBuscar();
+            }
+
             aux = new EAvion();
             //Obtener Todos los campos de la tabla X
             var lista = _avionBol.LlenarCombo(aux);
@@ -162,9 +174,8 @@ namespace aerolinea.Formularios
             if (enviarDatos==true)
             {
             enviarDatos = false;
-            EAvion avion = new EAvion();
             int id = Convert.ToInt32(dgvAvion.CurrentRow.Cells[0].Value.ToString());
-            Formularios.Vuelo.avion = _avionBol.ObtenerPorId(avion, id);
+            aux = _avionBol.ObtenerPorId(aux, id);
             this.Close();   
             }
         }

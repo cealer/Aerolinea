@@ -14,6 +14,7 @@ namespace aerolinea.Formularios
     {
         public static int asiento;
         public static double precio;
+
         private static Boleto m_FormDefInstance;
         public static Boleto DefInstance
         {
@@ -43,6 +44,7 @@ namespace aerolinea.Formularios
         private void btnBuscarDestino_Click(object sender, EventArgs e)
         {
             Destino aux = new Destino();
+            Destino.enviarDatos = true;
             aux.ShowDialog();
             try
             {
@@ -51,7 +53,6 @@ namespace aerolinea.Formularios
             }
             catch (Exception)
             {
-                
                 throw;
             }
         }
@@ -59,10 +60,11 @@ namespace aerolinea.Formularios
         private void btnSalidaVuelo_Click(object sender, EventArgs e)
         {
             Vuelo aux = new Vuelo();
+            Vuelo.enviarDatos = true;
             try
             {
                 aux.ShowDialog();
-                lblSalida.Text = Vuelo.aux.Salida.ToShortDateString();
+                lblSalida.Text = Vuelo.aux.Salida.ToString();
             }
             catch (Exception)
             {

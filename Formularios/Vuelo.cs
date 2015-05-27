@@ -50,19 +50,31 @@ namespace aerolinea.Formularios
             dgvVuelo.DataSource = _vueloBOL.ObtenerTodos(aux,buscar);
         }
 
+        void LlenarBuscar() {
+            aux = new EVuelo();
+            string buscar = "Vuelo.IdVuelo,Avion.Modelo,Vuelo.Salida,Destino.Destino";
+            var lista = _vueloBOL.ObtenerTodos(aux, buscar);
+        }
+
         void Limpiar()
         {
             lblAvion.Text="Modelo";
             lblDestino.Text="Destino";
             dtpSalida.Value = DateTime.Today;
             aux = new EVuelo();
+            Destino.aux = null;
+            Avion.aux = null;
         }
+
         private void btnOperacion_Click(object sender, EventArgs e)
         {
-            aux.IdDestino = destino.IdDestino;
-            aux.IdAvion = avion.IdAvion;
+
+            try
+            {
+            aux.IdDestino = Destino.aux.IdDestino;
+            aux.IdAvion = Avion.aux.IdAvion;
             aux.Salida =dtpSalida.Value;
-            
+
             if (aux.IdVuelo > 0)
             {
                 _vueloBOL.Modificar(aux);
@@ -77,13 +89,33 @@ namespace aerolinea.Formularios
             Limpiar();
             LlenarDatagriew();
             tabControl1.SelectedIndex = 1;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Verifique los datos");
+            }
         }
 
         public static bool enviarDatos = false;
 
+        void OpcionesBuscar() {
+            tabControl1.TabPages.RemoveAt(0);
+        }
+
         private void Vuelo_Load(object sender, EventArgs e)
         {
-            LlenarDatagriew();
+
+            if (enviarDatos==true)
+            {
+                LlenarBuscar();
+                OpcionesBuscar();
+                _vueloBOL.ObtenerCondicion(aux,"Destino",Destino.aux.Destino);
+            }
+            else
+            {
+                LlenarDatagriew();
+            }
         }
 
         private void btnBuscarAvion_Click(object sender, EventArgs e)
@@ -91,7 +123,7 @@ namespace aerolinea.Formularios
             Avion aux = new Avion();
             Avion.enviarDatos = true;
             aux.ShowDialog();
-            lblAvion.Text = avion.Modelo;
+            lblAvion.Text = Avion.aux.Modelo;
         }
 
         private void btnBuscarDestino_Click(object sender, EventArgs e)
@@ -109,9 +141,9 @@ namespace aerolinea.Formularios
 
         public static int idVuelo;
 
-        private void dgvVuelo_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvVuelo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (enviarDatos==true)
+            if (enviarDatos == true)
             {
                 enviarDatos = false;
                 idVuelo = Convert.ToInt32(dgvVuelo.CurrentRow.Cells[0].Value.ToString());
@@ -119,6 +151,20 @@ namespace aerolinea.Formularios
                 avion = _avionBol.ObtenerPorId(avion, aux.IdAvion);
                 this.Close();
             }
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            aux = new EVuelo();
+            int id = Convert.ToInt32(dgvVuelo.CurrentRow.Cells[0].Value.ToString());
+            _vueloBOL.Eliminar(aux, id);
+            MessageBox.Show("Eliminado");
+            LlenarDatagriew();
+        }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

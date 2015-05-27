@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblDestino = new System.Windows.Forms.Label();
+            this.lblAvion = new System.Windows.Forms.Label();
             this.dtpSalida = new System.Windows.Forms.DateTimePicker();
             this.btnBuscarDestino = new System.Windows.Forms.Button();
             this.btnBuscarAvion = new System.Windows.Forms.Button();
@@ -40,12 +43,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvVuelo = new System.Windows.Forms.DataGridView();
-            this.lblAvion = new System.Windows.Forms.Label();
-            this.lblDestino = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVuelo)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -77,6 +82,24 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos vuelo";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // lblDestino
+            // 
+            this.lblDestino.AutoSize = true;
+            this.lblDestino.Location = new System.Drawing.Point(184, 132);
+            this.lblDestino.Name = "lblDestino";
+            this.lblDestino.Size = new System.Drawing.Size(43, 13);
+            this.lblDestino.TabIndex = 12;
+            this.lblDestino.Text = "Destino";
+            // 
+            // lblAvion
+            // 
+            this.lblAvion.AutoSize = true;
+            this.lblAvion.Location = new System.Drawing.Point(184, 46);
+            this.lblAvion.Name = "lblAvion";
+            this.lblAvion.Size = new System.Drawing.Size(42, 13);
+            this.lblAvion.TabIndex = 11;
+            this.lblAvion.Text = "Modelo";
             // 
             // dtpSalida
             // 
@@ -167,32 +190,41 @@
             // 
             // dgvVuelo
             // 
+            this.dgvVuelo.AllowUserToAddRows = false;
+            this.dgvVuelo.AllowUserToDeleteRows = false;
             this.dgvVuelo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVuelo.ContextMenuStrip = this.contextMenuStrip1;
+            this.dgvVuelo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dgvVuelo.Location = new System.Drawing.Point(24, 26);
             this.dgvVuelo.Name = "dgvVuelo";
+            this.dgvVuelo.ReadOnly = true;
             this.dgvVuelo.RowHeadersVisible = false;
             this.dgvVuelo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVuelo.Size = new System.Drawing.Size(474, 225);
             this.dgvVuelo.TabIndex = 0;
-            this.dgvVuelo.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvVuelo_RowHeaderMouseDoubleClick);
+            this.dgvVuelo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVuelo_CellDoubleClick);
             // 
-            // lblAvion
+            // contextMenuStrip1
             // 
-            this.lblAvion.AutoSize = true;
-            this.lblAvion.Location = new System.Drawing.Point(184, 46);
-            this.lblAvion.Name = "lblAvion";
-            this.lblAvion.Size = new System.Drawing.Size(42, 13);
-            this.lblAvion.TabIndex = 11;
-            this.lblAvion.Text = "Modelo";
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modificarToolStripMenuItem,
+            this.eliminarToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
             // 
-            // lblDestino
+            // modificarToolStripMenuItem
             // 
-            this.lblDestino.AutoSize = true;
-            this.lblDestino.Location = new System.Drawing.Point(184, 132);
-            this.lblDestino.Name = "lblDestino";
-            this.lblDestino.Size = new System.Drawing.Size(43, 13);
-            this.lblDestino.TabIndex = 12;
-            this.lblDestino.Text = "Destino";
+            this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.modificarToolStripMenuItem.Text = "Modificar";
+            this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
+            // 
+            // eliminarToolStripMenuItem
+            // 
+            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.eliminarToolStripMenuItem.Text = "Eliminar";
+            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // Vuelo
             // 
@@ -208,6 +240,7 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVuelo)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -228,5 +261,8 @@
         private System.Windows.Forms.DataGridView dgvVuelo;
         private System.Windows.Forms.Label lblDestino;
         private System.Windows.Forms.Label lblAvion;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
     }
 }

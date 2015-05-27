@@ -46,6 +46,11 @@ namespace Aerolinea_LogicaNegocio
             _vueloDal.Update(aux);
         }
 
+        public DataTable ObtenerBuscar(EVuelo aux, string campos, string where)
+        {
+            return _vueloDal.SelectAllCondicional(aux, campos, where);
+        }
+
         public unknowtype ObtenerPorId<unknowtype>(unknowtype Entitie, int id)
         {
             return _vueloDal.ObtenerPorId(Entitie, id);
