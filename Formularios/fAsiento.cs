@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Aerolinea_LogicaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,8 @@ namespace aerolinea.Formularios
         {
             InitializeComponent();
         }
+
+        private readonly BoletoBOL _boletoBol = new BoletoBOL();
         private static fAsiento m_FormDefInstance;
         public static fAsiento DefInstance
         {
@@ -31,15 +34,14 @@ namespace aerolinea.Formularios
             }
         }
 
-        public static int can;
         private void Asiento_Load(object sender, EventArgs e)
         {
-            
+            var ocupados = _boletoBol.AsientoDisponibles();
             //Creando Asientos
             int cantidad=Vuelo.avion.Capacidad;
-            int X = 14;
-            int Y = 16;
-            int max = 1074;
+            int X = 12;
+            int Y = 14;
+            int max = 1036;
             for (int i = 1; i <= cantidad; i++)
             {
                 Asiento aux = new Asiento();
@@ -72,6 +74,18 @@ namespace aerolinea.Formularios
                     aux.Location = new System.Drawing.Point(X, Y);       
                     X = X + 50;
                 }
+
+                foreach (var item in ocupados)
+                {
+                    if (aux.Numero == (int)item)
+                    {
+                        aux.Estado = EstadoAsiento.Ocupado;
+                        aux.Enabled = false;
+                    }    
+                }
+                
+
+
             }
         }
 

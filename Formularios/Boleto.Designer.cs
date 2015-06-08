@@ -40,12 +40,9 @@
             this.lblAsiento = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblDes = new System.Windows.Forms.Label();
             this.lblCosto = new System.Windows.Forms.Label();
@@ -53,6 +50,10 @@
             this.btnBuscarDestino = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnPasajero = new System.Windows.Forms.Button();
+            this.lblNombres = new System.Windows.Forms.Label();
+            this.lblApellidos = new System.Windows.Forms.Label();
+            this.lblDNI = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -104,6 +105,7 @@
             this.btnOperacion.TabIndex = 17;
             this.btnOperacion.Text = "Operacion";
             this.btnOperacion.UseVisualStyleBackColor = true;
+            this.btnOperacion.Click += new System.EventHandler(this.btnOperacion_Click);
             // 
             // panel4
             // 
@@ -173,23 +175,17 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.maskedTextBox1);
+            this.panel1.Controls.Add(this.lblNombres);
+            this.panel1.Controls.Add(this.lblDNI);
+            this.panel1.Controls.Add(this.lblApellidos);
+            this.panel1.Controls.Add(this.btnPasajero);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(14, 6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(241, 120);
             this.panel1.TabIndex = 13;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(84, 91);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 10;
             // 
             // label1
             // 
@@ -217,20 +213,6 @@
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "DNI";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(84, 53);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 9;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(84, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 8;
             // 
             // panel2
             // 
@@ -300,6 +282,43 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btnPasajero
+            // 
+            this.btnPasajero.Location = new System.Drawing.Point(200, 51);
+            this.btnPasajero.Name = "btnPasajero";
+            this.btnPasajero.Size = new System.Drawing.Size(31, 23);
+            this.btnPasajero.TabIndex = 18;
+            this.btnPasajero.Text = "...";
+            this.btnPasajero.UseVisualStyleBackColor = true;
+            this.btnPasajero.Click += new System.EventHandler(this.btnPasajero_Click);
+            // 
+            // lblNombres
+            // 
+            this.lblNombres.AutoSize = true;
+            this.lblNombres.Location = new System.Drawing.Point(113, 14);
+            this.lblNombres.Name = "lblNombres";
+            this.lblNombres.Size = new System.Drawing.Size(35, 13);
+            this.lblNombres.TabIndex = 18;
+            this.lblNombres.Text = "label8";
+            // 
+            // lblApellidos
+            // 
+            this.lblApellidos.AutoSize = true;
+            this.lblApellidos.Location = new System.Drawing.Point(113, 56);
+            this.lblApellidos.Name = "lblApellidos";
+            this.lblApellidos.Size = new System.Drawing.Size(35, 13);
+            this.lblApellidos.TabIndex = 19;
+            this.lblApellidos.Text = "label9";
+            // 
+            // lblDNI
+            // 
+            this.lblDNI.AutoSize = true;
+            this.lblDNI.Location = new System.Drawing.Point(113, 91);
+            this.lblDNI.Name = "lblDNI";
+            this.lblDNI.Size = new System.Drawing.Size(41, 13);
+            this.lblDNI.TabIndex = 20;
+            this.lblDNI.Text = "label10";
+            // 
             // Boleto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,9 +354,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblAsiento;
         private System.Windows.Forms.Panel panel2;
@@ -351,5 +367,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnSalidaVuelo;
         private System.Windows.Forms.Button btnOperacion;
+        private System.Windows.Forms.Button btnPasajero;
+        private System.Windows.Forms.Label lblNombres;
+        private System.Windows.Forms.Label lblDNI;
+        private System.Windows.Forms.Label lblApellidos;
     }
 }

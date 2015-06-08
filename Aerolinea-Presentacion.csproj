@@ -62,6 +62,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\fAeropuerto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\fAeropuerto.Designer.cs">
+      <DependentUpon>fAeropuerto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\fAsiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,12 @@
     <Compile Include="Formularios\Pasajero.Designer.cs">
       <DependentUpon>Pasajero.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\TipoPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TipoPersona.Designer.cs">
+      <DependentUpon>TipoPersona.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +124,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\fAeropuerto.resx">
+      <DependentUpon>fAeropuerto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\fAsiento.resx">
       <DependentUpon>fAsiento.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Pasajero.resx">
       <DependentUpon>Pasajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TipoPersona.resx">
+      <DependentUpon>TipoPersona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Vuelo.resx">
       <DependentUpon>Vuelo.cs</DependentUpon>

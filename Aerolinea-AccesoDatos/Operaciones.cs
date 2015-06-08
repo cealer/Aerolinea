@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.Collections;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+
 namespace Aerolinea_AccesoDatos
 {
   public  class Operaciones:BDComun
     {
-
+      //Ejecutar Procedimientos almancenados
+      
+      //Generador de consultas
       string getTable<unknowtype>(unknowtype Entities)
       {
        return Regex.Replace(Entities.GetType().Name, "E", "");
@@ -107,6 +110,18 @@ namespace Aerolinea_AccesoDatos
               }
           }
           return listaCampos;
+      }
+
+      //Consultas 
+      public DataTable Select<unknowtype>(unknowtype Entities, string campo)
+      {
+          string consulta = "";
+          string Table = getTable(Entities);
+          consulta = "select "+campo +" from " + Table;
+          SqlDataAdapter adapter = new SqlDataAdapter(consulta, cn);
+          DataSet ds = new DataSet();
+          adapter.Fill(ds, Table);
+          return ds.Tables[0];
       }
 
       public DataTable SelectAll<unknowtype>(unknowtype Entities,string campo,string valor)
@@ -210,5 +225,7 @@ namespace Aerolinea_AccesoDatos
           return Entities;
       }
 
+
+      
     }
 }

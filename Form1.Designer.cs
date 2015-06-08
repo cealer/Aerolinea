@@ -38,6 +38,9 @@
             this.vuelosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.boletoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,22 +66,23 @@
             // 
             this.mantenimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.avionToolStripMenuItem,
-            this.destinoToolStripMenuItem});
+            this.destinoToolStripMenuItem,
+            this.empleadosToolStripMenuItem});
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
-            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
+            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
             // 
             // avionToolStripMenuItem
             // 
             this.avionToolStripMenuItem.Name = "avionToolStripMenuItem";
-            this.avionToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.avionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.avionToolStripMenuItem.Text = "Avion";
             this.avionToolStripMenuItem.Click += new System.EventHandler(this.avionToolStripMenuItem_Click);
             // 
             // destinoToolStripMenuItem
             // 
             this.destinoToolStripMenuItem.Name = "destinoToolStripMenuItem";
-            this.destinoToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.destinoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.destinoToolStripMenuItem.Text = "Destino";
             this.destinoToolStripMenuItem.Click += new System.EventHandler(this.destinoToolStripMenuItem_Click);
             // 
@@ -87,13 +91,13 @@
             this.operacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vuelosToolStripMenuItem});
             this.operacionesToolStripMenuItem.Name = "operacionesToolStripMenuItem";
-            this.operacionesToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.operacionesToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.operacionesToolStripMenuItem.Text = "Operaciones";
             // 
             // vuelosToolStripMenuItem
             // 
             this.vuelosToolStripMenuItem.Name = "vuelosToolStripMenuItem";
-            this.vuelosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vuelosToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.vuelosToolStripMenuItem.Text = "Vuelos";
             this.vuelosToolStripMenuItem.Click += new System.EventHandler(this.vuelosToolStripMenuItem_Click);
             // 
@@ -102,7 +106,7 @@
             this.ventaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.boletoToolStripMenuItem});
             this.ventaToolStripMenuItem.Name = "ventaToolStripMenuItem";
-            this.ventaToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.ventaToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.ventaToolStripMenuItem.Text = "Venta";
             // 
             // boletoToolStripMenuItem
@@ -111,6 +115,29 @@
             this.boletoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.boletoToolStripMenuItem.Text = "Boleto";
             this.boletoToolStripMenuItem.Click += new System.EventHandler(this.boletoToolStripMenuItem_Click);
+            // 
+            // empleadosToolStripMenuItem
+            // 
+            this.empleadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mantenimientoToolStripMenuItem1,
+            this.tipoToolStripMenuItem});
+            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.empleadosToolStripMenuItem.Text = "Empleados";
+            // 
+            // mantenimientoToolStripMenuItem1
+            // 
+            this.mantenimientoToolStripMenuItem1.Name = "mantenimientoToolStripMenuItem1";
+            this.mantenimientoToolStripMenuItem1.Size = new System.Drawing.Size(156, 22);
+            this.mantenimientoToolStripMenuItem1.Text = "Mantenimiento";
+            this.mantenimientoToolStripMenuItem1.Click += new System.EventHandler(this.mantenimientoToolStripMenuItem1_Click);
+            // 
+            // tipoToolStripMenuItem
+            // 
+            this.tipoToolStripMenuItem.Name = "tipoToolStripMenuItem";
+            this.tipoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.tipoToolStripMenuItem.Text = "Tipo";
+            this.tipoToolStripMenuItem.Click += new System.EventHandler(this.tipoToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -142,6 +169,9 @@
         private System.Windows.Forms.ToolStripMenuItem vuelosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem boletoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tipoToolStripMenuItem;
     }
 }
 

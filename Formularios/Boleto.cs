@@ -8,12 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Aerolinea_Entidades;
+using Aerolinea_LogicaNegocio;
 namespace aerolinea.Formularios
 {
     public partial class Boleto : Form
     {
         public static int asiento;
         public static double precio;
+
+        EBoleto aux = new EBoleto();
+
+        private readonly BoletoBOL _boletoBol = new BoletoBOL();
 
         private static Boleto m_FormDefInstance;
         public static Boleto DefInstance
@@ -29,6 +34,7 @@ namespace aerolinea.Formularios
                 m_FormDefInstance = value;
             }
         }
+      
         public Boleto()
         {
             InitializeComponent();
@@ -66,16 +72,70 @@ namespace aerolinea.Formularios
                 aux.ShowDialog();
                 lblSalida.Text = Vuelo.aux.Salida.ToString();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                
-                throw;
+
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void Boleto_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnOperacion_Click(object sender, EventArgs e)
+        {
+            try
+            {   
+                if (aux.IdBoleto > 0)
+                {
+                    //_boletoBol.Modificar(aux);
+                    MessageBox.Show("Modificado");
+                }
+                else
+                {
+                    aux.IdAeropuerto = 1;
+                    aux.IdPersona = Pasajero.aux.IdPersona;
+                    aux.IdVuelo = Vuelo.aux.IdVuelo;
+                    aux.Asiento = asiento;
+                    aux.Costo = precio;
+                    _boletoBol.Registrar(aux);
+                    Limpiar();
+                    MessageBox.Show("Agregado");          
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
+
+        void Limpiar() {
+            lblApellidos.Text = "";
+            lblAsiento.Text = "";
+            lblCosto.Text = "";
+            lblDes.Text = "";
+            lblDNI.Text = "";
+            lblNombres.Text = "";
+            lblSalida.Text = "";
+            Pasajero.aux = null;
+            Destino.aux = null;
+            Vuelo.aux = null;
+        }
+
+        private void btnPasajero_Click(object sender, EventArgs e)
+        {
+            Pasajero.opPasajero = true;
+            Pasajero aux = new Pasajero();
+            aux.ShowDialog();
+            Pasajero.opPasajero = false;
+            lblNombres.Text = Pasajero.aux.Nombres;
+            lblApellidos.Text = Pasajero.aux.Apellidos;
+            lblDNI.Text = Pasajero.aux.Dni;
         }
     }
 }

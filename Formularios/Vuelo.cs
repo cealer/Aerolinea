@@ -110,7 +110,9 @@ namespace aerolinea.Formularios
             {
                 LlenarBuscar();
                 OpcionesBuscar();
-                _vueloBOL.ObtenerCondicion(aux,"Destino",Destino.aux.Destino);
+                //Cambiar por el destino
+               // _vueloBOL.ObtenerCondicion(aux,"Destino",Destino.aux.Destino);
+                LlenarDatagriew();
             }
             else
             {

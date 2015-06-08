@@ -52,5 +52,22 @@ namespace aerolinea
             Boleto.DefInstance.MdiParent = this;
             Boleto.DefInstance.Show();
         }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void tipoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TipoPersona.DefInstance.MdiParent = this;
+            TipoPersona.DefInstance.Show();
+        }
+
+        private void mantenimientoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Pasajero.DefInstance.MdiParent = this;
+            Pasajero.DefInstance.Show();
+        }
     }
 }

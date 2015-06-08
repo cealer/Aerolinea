@@ -16,6 +16,10 @@ namespace Aerolinea_AccesoDatos
             Insert(aux);
         }
 
+        public DataTable Obtener(EBoleto aux,string campo) {
+            return Select(aux, campo);
+        }
+
         public DataTable ObtenerTodos(EBoleto aux)
         {
             return SelectAll(aux);
@@ -44,5 +48,6 @@ namespace Aerolinea_AccesoDatos
         {
             return GetByid(Entitie, id);
         }
+
    }
 }

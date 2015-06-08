@@ -42,14 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AsientoDAL.cs" />
+    <Compile Include="AeropuertoDAL.cs" />
     <Compile Include="AvionDAL.cs" />
     <Compile Include="BDComun.cs" />
     <Compile Include="BoletoDAL.cs" />
     <Compile Include="DestinoDAL.cs" />
     <Compile Include="Operaciones.cs" />
-    <Compile Include="PasajeroDAL.cs" />
+    <Compile Include="PersonaDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoPersonaDAL.cs" />
     <Compile Include="UsuarioDAL.cs" />
     <Compile Include="VueloDAL.cs" />
   </ItemGroup>

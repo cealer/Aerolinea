@@ -14,3 +14,11 @@ C:\aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-Entidades.pdb
 C:\aerolinea\Aerolinea-AccesoDatos\obj\Debug\Aerolinea-AccesoDatos.csprojResolveAssemblyReference.cache
 C:\aerolinea\Aerolinea-AccesoDatos\obj\Debug\Aerolinea-AccesoDatos.dll
 C:\aerolinea\Aerolinea-AccesoDatos\obj\Debug\Aerolinea-AccesoDatos.pdb
+C:\Users\Cesar\Desktop\aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-AccesoDatos.dll.config
+C:\Users\Cesar\Desktop\aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-AccesoDatos.dll
+C:\Users\Cesar\Desktop\aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-AccesoDatos.pdb
+C:\Users\Cesar\Desktop\aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-Entidades.dll
+C:\Users\Cesar\Desktop\aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-Entidades.pdb
+C:\Users\Cesar\Desktop\aerolinea\Aerolinea-AccesoDatos\obj\Debug\Aerolinea-AccesoDatos.csprojResolveAssemblyReference.cache
+C:\Users\Cesar\Desktop\aerolinea\Aerolinea-AccesoDatos\obj\Debug\Aerolinea-AccesoDatos.dll
+C:\Users\Cesar\Desktop\aerolinea\Aerolinea-AccesoDatos\obj\Debug\Aerolinea-AccesoDatos.pdb

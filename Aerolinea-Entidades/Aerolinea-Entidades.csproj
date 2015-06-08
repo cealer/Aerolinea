@@ -39,11 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EAeropuerto.cs" />
     <Compile Include="EAsiento.cs" />
     <Compile Include="EAvion.cs" />
     <Compile Include="EBoleto.cs" />
     <Compile Include="EDestino.cs" />
-    <Compile Include="EPasajero.cs" />
+    <Compile Include="EPersona.cs" />
+    <Compile Include="ETipoPersona.cs" />
     <Compile Include="EUsuario.cs" />
     <Compile Include="EVuelo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
