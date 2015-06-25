@@ -95,11 +95,11 @@ namespace aerolinea.Formularios
             try
             {
                 aux.Aerolinea = tbxNomAero.Text;
+                aux.Modelo = tbxModel.Text;
                 aux.Capacidad = int.Parse(tbxCap.Text);
                 aux.Despliegue = float.Parse(tbxPesoMax.Text);
                 aux.Envergadura = float.Parse(tbxEnve.Text);
                 aux.Longitud = float.Parse(tbxLon.Text);
-                aux.Modelo = tbxModel.Text;
                 aux.Salida = int.Parse(tbxSalida.Text);
                 aux.Sanitarios = int.Parse(tbxSani.Text);
 
@@ -159,8 +159,8 @@ namespace aerolinea.Formularios
         {
             int idAvion = Convert.ToInt32(dgvAvion.CurrentRow.Cells[0].Value);
             aux = _avionBol.ObtenerPorId(aux, idAvion);
-            tbxNomAero.Text = aux.Aerolinea;
-            tbxModel.Text = aux.Modelo;
+            tbxNomAero.Text = aux.Aerolinea.ToString();
+            tbxModel.Text = aux.Modelo.ToString();
             tbxCap.Text = aux.Capacidad.ToString();
             tbxLon.Text = aux.Longitud.ToString();
             tbxEnve.Text = aux.Envergadura.ToString();
@@ -193,6 +193,12 @@ namespace aerolinea.Formularios
 
                 this.Close();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            aux = _avionBol.ObtenerPorId(aux, 1);
+            MessageBox.Show(aux.IdAvion.ToString());
         }
     }
 }

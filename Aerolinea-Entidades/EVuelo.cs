@@ -12,6 +12,5 @@ namespace Aerolinea_Entidades
         public int IdAvion { get; set; }
         public DateTime Salida { get; set; }
         public int IdDestino { get; set; }
-        
     }
 }

@@ -42,6 +42,11 @@ namespace aerolinea.Formularios
             InitializeComponent();
         }
 
+        void Limpiar() {
+            tbxPass.Clear();
+            tbxUsuario.Clear();
+        }
+
         private void btnOperacion_Click(object sender, EventArgs e)
         {
             try
@@ -52,6 +57,7 @@ namespace aerolinea.Formularios
                 aux.Pass = hash;
                 aux.Privilegios = rdnSi.Checked;
                 _usuarioBol.Registrar(aux);
+                Limpiar();
                 MessageBox.Show("Usuario Registrado");
             }
             catch (CustomException ex)

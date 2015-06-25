@@ -54,6 +54,8 @@ namespace Aerolinea_LogicaNegocio
             EUsuario aux = new EUsuario();
             return _usuarioDal.BuscarUsuario(aux, usuario);
         }
-
+        public int MaxUsuario() {
+            return _usuarioDal.ObtenerMaxId();
+        }
     }
 }

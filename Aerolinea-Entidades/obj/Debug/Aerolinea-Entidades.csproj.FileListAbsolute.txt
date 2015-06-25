@@ -16,3 +16,8 @@ C:\Users\Cesar\Documents\aerolinea\Aerolinea-Entidades\bin\Debug\Aerolinea-Entid
 C:\Users\Cesar\Documents\aerolinea\Aerolinea-Entidades\bin\Debug\Aerolinea-Entidades.pdb
 C:\Users\Cesar\Documents\aerolinea\Aerolinea-Entidades\obj\Debug\Aerolinea-Entidades.dll
 C:\Users\Cesar\Documents\aerolinea\Aerolinea-Entidades\obj\Debug\Aerolinea-Entidades.pdb
+C:\Users\Cesar\Desktop\Test\Aerolinea\Aerolinea-Entidades\bin\Debug\Aerolinea-Entidades.dll
+C:\Users\Cesar\Desktop\Test\Aerolinea\Aerolinea-Entidades\bin\Debug\Aerolinea-Entidades.pdb
+C:\Users\Cesar\Desktop\Test\Aerolinea\Aerolinea-Entidades\obj\Debug\Aerolinea-Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Cesar\Desktop\Test\Aerolinea\Aerolinea-Entidades\obj\Debug\Aerolinea-Entidades.dll
+C:\Users\Cesar\Desktop\Test\Aerolinea\Aerolinea-Entidades\obj\Debug\Aerolinea-Entidades.pdb

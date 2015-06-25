@@ -59,6 +59,7 @@
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -83,6 +84,7 @@
             // 
             this.tabPage1.BackgroundImage = global::aerolinea.Properties.Resources.towards_the_sunset_1920x1200_wallpaper_amanecer_visto_desde_un_avión_vistas_aéreas;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.tbxSani);
             this.tabPage1.Controls.Add(this.tbxSalida);
             this.tabPage1.Controls.Add(this.tbxPesoMax);
@@ -360,6 +362,16 @@
             this.tabPage3.Text = "Salir";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(68, 262);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Avion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,5 +427,6 @@
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button button1;
     }
 }

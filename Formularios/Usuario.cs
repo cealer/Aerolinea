@@ -81,6 +81,11 @@ namespace aerolinea.Formularios
 
         private void Usuario_Load(object sender, EventArgs e)
         {
+            if (_usuarioBol.MaxUsuario()==0)
+            {
+                UsuarioMantenimiento aux = new UsuarioMantenimiento();
+                aux.ShowDialog();
+            }
             Privilegios = false;
             tbxUsuario.Focus();
         }

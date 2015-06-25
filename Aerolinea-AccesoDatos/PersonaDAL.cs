@@ -47,15 +47,16 @@ namespace Aerolinea_AccesoDatos
             return GetByid(Entitie, id);
         }
 
-        public int ObtenerMaxId() {
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "pMaxIdPasajero";
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Connection = cn;
-            cn.Open();
-            int r =Convert.ToInt32(cmd.ExecuteScalar());
-            cn.Close();
-            return r;
-        }
+      public int ObtenerMaxId()
+      {
+          SqlCommand cmd = new SqlCommand();
+          cmd.CommandText = "pMaxIdPasajero";
+          cmd.CommandType = CommandType.StoredProcedure;
+          cmd.Connection = cn;
+          cn.Open();
+          int r = Convert.ToInt32(cmd.ExecuteScalar());
+          cn.Close();
+          return r;
+      }
     }
 }

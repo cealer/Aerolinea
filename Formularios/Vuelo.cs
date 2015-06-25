@@ -48,6 +48,10 @@ namespace aerolinea.Formularios
             aux = new EVuelo();
             string buscar="Vuelo.IdVuelo,Avion.Modelo,Vuelo.Salida,Destino.Destino";
             dgvVuelo.DataSource = _vueloBOL.ObtenerTodos(aux,buscar);
+            if (enviarDatos == true)
+            {
+                dgvVuelo.DataSource = _vueloBOL.ObtenerBuscar(aux, buscar,"Destino",Boleto.buscarDestino);
+            }
         }
 
         void LlenarBuscar() {
@@ -113,8 +117,6 @@ namespace aerolinea.Formularios
             {
                 LlenarBuscar();
                 OpcionesBuscar();
-                //Cambiar por el destino
-               // _vueloBOL.ObtenerCondicion(aux,"Destino",Destino.aux.Destino);
                 LlenarDatagriew();
             }
             else
@@ -131,12 +133,15 @@ namespace aerolinea.Formularios
             lblAvion.Text = Avion.aux.Modelo;
         }
 
+        public static string DestinoBuscar = "";
+
         private void btnBuscarDestino_Click(object sender, EventArgs e)
         {
             Destino aux = new Destino();
             Destino.enviarDatos = true;
             aux.ShowDialog();
             lblDestino.Text = Destino.aux.Destino;
+           
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -169,7 +174,7 @@ namespace aerolinea.Formularios
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

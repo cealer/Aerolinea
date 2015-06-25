@@ -33,3 +33,13 @@ C:\Users\Cesar\Documents\aerolinea\Aerolinea-AccesoDatos\obj\Debug\Aerolinea-Acc
 C:\Users\Cesar\Documents\aerolinea\Aerolinea-AccesoDatos\bin\Debug\BCrypt.Net.dll
 C:\Users\Cesar\Documents\aerolinea\Aerolinea-AccesoDatos\bin\Debug\BCrypt.Net.pdb
 C:\Users\Cesar\Documents\aerolinea\Aerolinea-AccesoDatos\bin\Debug\BCrypt.Net.xml
+C:\Users\Cesar\Desktop\Test\Aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-AccesoDatos.dll.config
+C:\Users\Cesar\Desktop\Test\Aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-AccesoDatos.dll
+C:\Users\Cesar\Desktop\Test\Aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-AccesoDatos.pdb
+C:\Users\Cesar\Desktop\Test\Aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-Entidades.dll
+C:\Users\Cesar\Desktop\Test\Aerolinea\Aerolinea-AccesoDatos\bin\Debug\Aerolinea-Entidades.pdb
+C:\Users\Cesar\Desktop\Test\Aerolinea\Aerolinea-AccesoDatos\bin\Debug\BCrypt.Net.pdb
+C:\Users\Cesar\Desktop\Test\Aerolinea\Aerolinea-AccesoDatos\bin\Debug\BCrypt.Net.xml
+C:\Users\Cesar\Desktop\Test\Aerolinea\Aerolinea-AccesoDatos\obj\Debug\Aerolinea-AccesoDatos.csprojResolveAssemblyReference.cache
+C:\Users\Cesar\Desktop\Test\Aerolinea\Aerolinea-AccesoDatos\obj\Debug\Aerolinea-AccesoDatos.dll
+C:\Users\Cesar\Desktop\Test\Aerolinea\Aerolinea-AccesoDatos\obj\Debug\Aerolinea-AccesoDatos.pdb

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,5 +48,16 @@ namespace Aerolinea_AccesoDatos
 
         }
 
+        public int ObtenerMaxId()
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "pMaxIdUsuario";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cn;
+            cn.Open();
+            int r = Convert.ToInt32(cmd.ExecuteScalar());
+            cn.Close();
+            return r;
+        }
     }
 }

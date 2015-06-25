@@ -225,7 +225,7 @@ namespace Aerolinea_AccesoDatos
         {
             string Table = getTable(Entities);
             var atributos = Entities.GetType().GetMethods();
-            var getAtributos = atributos.Where(x => x.Name.Contains("get"));
+            var getAtributos = atributos.Where(x => x.Name.Contains("set"));
             string consulta = "SELECT * FROM " + Table + " WHERE Id" + Table + "= @id" + Table;
             SqlCommand cmd = new SqlCommand(consulta, cn);
             cmd.Parameters.AddWithValue("@id" + Table, id);
@@ -236,8 +236,8 @@ namespace Aerolinea_AccesoDatos
             {
                 foreach (var item in getAtributos)
                 {
-                    Entities.GetType().GetProperty(Regex.Replace(item.Name, "get_", "")).SetValue(Entities, list.GetValue(c));
-                    c++;
+                        Entities.GetType().GetProperty(Regex.Replace(item.Name, "set_", "")).SetValue(Entities, list.GetValue(c));
+                        c++; 
                 }
             }
             DesConectar();

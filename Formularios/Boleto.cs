@@ -59,6 +59,7 @@ namespace aerolinea.Formularios
             fAsiento aux = new fAsiento();
             aux.ShowDialog();
             lblAsiento.Text = asiento.ToString();
+            
         }
 
         private void btnBuscarDestino_Click(object sender, EventArgs e)
@@ -77,8 +78,11 @@ namespace aerolinea.Formularios
             }
         }
 
+        public static string buscarDestino="";
+
         private void btnSalidaVuelo_Click(object sender, EventArgs e)
         {
+            buscarDestino = lblDes.Text;
             Vuelo aux = new Vuelo();
             Vuelo.enviarDatos = true;
             try

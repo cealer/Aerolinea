@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Aerolinea_Entidades
 {
-   public class EAvion
+  public  class EAvion
     {
         public int IdAvion { get; set; }
         public string Aerolinea { get; set; }
