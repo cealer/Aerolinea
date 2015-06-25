@@ -29,5 +29,10 @@ namespace Aerolinea_AccesoDatos
         {
             Update(aux);
         }
+
+        public unknowtype ObtenerPorId<unknowtype>(unknowtype Entitie, int id)
+        {
+            return GetByid(Entitie, id);
+        }
     }
 }

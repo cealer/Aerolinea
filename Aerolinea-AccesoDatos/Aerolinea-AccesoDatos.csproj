@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net">
+      <HintPath>..\..\..\Desktop\BCrypt.Net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -42,11 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AeropuertoDAL.cs" />
     <Compile Include="AvionDAL.cs" />
     <Compile Include="BDComun.cs" />
     <Compile Include="BoletoDAL.cs" />
     <Compile Include="DestinoDAL.cs" />
+    <Compile Include="Hashing.cs" />
     <Compile Include="Operaciones.cs" />
     <Compile Include="PersonaDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

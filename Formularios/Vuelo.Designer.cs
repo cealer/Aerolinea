@@ -86,7 +86,7 @@
             // lblDestino
             // 
             this.lblDestino.AutoSize = true;
-            this.lblDestino.Location = new System.Drawing.Point(184, 132);
+            this.lblDestino.Location = new System.Drawing.Point(215, 146);
             this.lblDestino.Name = "lblDestino";
             this.lblDestino.Size = new System.Drawing.Size(43, 13);
             this.lblDestino.TabIndex = 12;
@@ -95,7 +95,7 @@
             // lblAvion
             // 
             this.lblAvion.AutoSize = true;
-            this.lblAvion.Location = new System.Drawing.Point(184, 46);
+            this.lblAvion.Location = new System.Drawing.Point(215, 60);
             this.lblAvion.Name = "lblAvion";
             this.lblAvion.Size = new System.Drawing.Size(42, 13);
             this.lblAvion.TabIndex = 11;
@@ -105,14 +105,14 @@
             // 
             this.dtpSalida.CustomFormat = "dd/MM/yyyy hh:mm:ss";
             this.dtpSalida.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpSalida.Location = new System.Drawing.Point(136, 85);
+            this.dtpSalida.Location = new System.Drawing.Point(167, 99);
             this.dtpSalida.Name = "dtpSalida";
             this.dtpSalida.Size = new System.Drawing.Size(139, 20);
             this.dtpSalida.TabIndex = 10;
             // 
             // btnBuscarDestino
             // 
-            this.btnBuscarDestino.Location = new System.Drawing.Point(317, 122);
+            this.btnBuscarDestino.Location = new System.Drawing.Point(348, 136);
             this.btnBuscarDestino.Name = "btnBuscarDestino";
             this.btnBuscarDestino.Size = new System.Drawing.Size(27, 23);
             this.btnBuscarDestino.TabIndex = 9;
@@ -122,7 +122,7 @@
             // 
             // btnBuscarAvion
             // 
-            this.btnBuscarAvion.Location = new System.Drawing.Point(317, 46);
+            this.btnBuscarAvion.Location = new System.Drawing.Point(348, 60);
             this.btnBuscarAvion.Name = "btnBuscarAvion";
             this.btnBuscarAvion.Size = new System.Drawing.Size(27, 23);
             this.btnBuscarAvion.TabIndex = 8;
@@ -132,7 +132,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(236, 201);
+            this.btnCancelar.Location = new System.Drawing.Point(267, 215);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 7;
@@ -142,7 +142,7 @@
             // 
             // btnOperacion
             // 
-            this.btnOperacion.Location = new System.Drawing.Point(134, 201);
+            this.btnOperacion.Location = new System.Drawing.Point(165, 215);
             this.btnOperacion.Name = "btnOperacion";
             this.btnOperacion.Size = new System.Drawing.Size(76, 23);
             this.btnOperacion.TabIndex = 6;
@@ -153,7 +153,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 132);
+            this.label3.Location = new System.Drawing.Point(78, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 2;
@@ -162,7 +162,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 85);
+            this.label2.Location = new System.Drawing.Point(78, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 1;
@@ -171,7 +171,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 46);
+            this.label1.Location = new System.Drawing.Point(78, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 0;
@@ -210,19 +210,19 @@
             this.modificarToolStripMenuItem,
             this.eliminarToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(126, 48);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 

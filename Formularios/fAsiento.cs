@@ -1,5 +1,7 @@
-﻿using Aerolinea_LogicaNegocio;
+﻿using Aerolinea_Entidades;
+using Aerolinea_LogicaNegocio;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +21,9 @@ namespace aerolinea.Formularios
         }
 
         private readonly BoletoBOL _boletoBol = new BoletoBOL();
+        private readonly VueloBOL _vueloBol = new VueloBOL();
+        private readonly AvionBOL _avionBol = new AvionBOL();
+
         private static fAsiento m_FormDefInstance;
         public static fAsiento DefInstance
         {
@@ -36,7 +41,14 @@ namespace aerolinea.Formularios
 
         private void Asiento_Load(object sender, EventArgs e)
         {
-            var ocupados = _boletoBol.AsientoDisponibles();
+            EVuelo vuelo = new EVuelo();
+            EAvion avion= new EAvion();
+            if (!(Vuelo.aux.IdVuelo>0))
+            {
+                Vuelo.aux =_vueloBol.ObtenerPorId(vuelo, Boleto.parametroAsiento);
+                Vuelo.avion = _avionBol.ObtenerPorId(avion, Boleto.parametroAvion);
+            }
+            var ocupados = _boletoBol.AsientoDisponibles(Vuelo.aux.IdVuelo);
             //Creando Asientos
             int cantidad=Vuelo.avion.Capacidad;
             int X = 12;
@@ -45,21 +57,17 @@ namespace aerolinea.Formularios
             for (int i = 1; i <= cantidad; i++)
             {
                 Asiento aux = new Asiento();
-                
                 aux.Name = "asiento"+(0+i).ToString();
                 aux.TabIndex = i;
                 aux.Numero = i;
-                
                 // 
                 // avion
                 // 
-
                 avion1.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                 avion1.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
                 avion1.Controls.Add(aux);
                 avion1.Name = "avion";
-                avion1.ResumeLayout(false);
-                
+                avion1.ResumeLayout(false);      
                 //
                 //Creando asientos
                 //
@@ -83,9 +91,6 @@ namespace aerolinea.Formularios
                         aux.Enabled = false;
                     }    
                 }
-                
-
-
             }
         }
 

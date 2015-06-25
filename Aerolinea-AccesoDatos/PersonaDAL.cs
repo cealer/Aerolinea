@@ -32,16 +32,17 @@ namespace Aerolinea_AccesoDatos
             Update(aux);
         }
 
-        public DataTable ObtenerCondicional(EPersona aux, string campo, string valor)
+        public DataTable ObtenerCondicional(EPersona aux, string campo, string valor,string dato)
         {
-            return SelectAll(aux, campo, valor);
+            return SelectAllCondicional(aux, campo, valor,dato);
         }
 
         public ArrayList LlenarComboBusqueda(EPersona aux)
         {
             return ObtenerAtributos(aux);
         }
-        public unknowtype ObtenerPorId<unknowtype>(unknowtype Entitie, int id)
+       
+      public unknowtype ObtenerPorId<unknowtype>(unknowtype Entitie, int id)
         {
             return GetByid(Entitie, id);
         }

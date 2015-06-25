@@ -15,6 +15,7 @@ namespace aerolinea.Formularios
     public partial class TipoPersona : Form
     {
         ETipoPersona aux =  new ETipoPersona();
+        
         private readonly TipoPersonaBOL _TipoPersonaBOL = new TipoPersonaBOL();
 
         private static TipoPersona m_FormDefInstance;
@@ -48,24 +49,56 @@ namespace aerolinea.Formularios
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            aux.Tipo = tbxTipo.Text;
-            
-            if (aux.IdTipoPersona > 0)
+            try
             {
-               // _TipoPersona.Modificar(aux);
-                MessageBox.Show("Modificado");
-            }
-            else
-            {
-                _TipoPersonaBOL.Registrar(aux);
-                MessageBox.Show("Agregado");
-            }
+                aux.Tipo = tbxTipo.Text;
 
-          //  Limpiar();
-            LlenarDatagriew();
-            tabControl1.SelectedIndex = 1;
+                if (aux.IdTipoPersona > 0)
+                {
+                    _TipoPersonaBOL.Modificar(aux);
+                    MessageBox.Show("Modificado");
+                }
+                else
+                {
+                    _TipoPersonaBOL.Registrar(aux);
+                    MessageBox.Show("Agregado");
+                }
+
+                Limpiar();
+                LlenarDatagriew();
+                tabControl1.SelectedIndex = 1;
+            }
+            catch (CustomException ex)
+            {
+                MessageBox.Show(this, ex.Message, "No se pudo guardar.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception ex){
+                MessageBox.Show(ex.Message,"Error inesperado");
+            }
         }
 
+        void Limpiar() {
+            tbxTipo.Clear();
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            aux = new ETipoPersona();
+            int id = Convert.ToInt32(dgvTipoPersona.CurrentRow.Cells[0].Value.ToString());
+            _TipoPersonaBOL.Eliminar(aux, id);
+            MessageBox.Show("Eliminado");
+            LlenarDatagriew();
+        }
+
+        int idTipo;
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            idTipo = Convert.ToInt32(dgvTipoPersona.CurrentRow.Cells[0].Value);
+            aux = _TipoPersonaBOL.ObtenerPorId(aux, idTipo);
+            tbxTipo.Text = aux.Tipo;
+            tabControl1.SelectedIndex = 0;
+        }
 
     }
 }

@@ -49,26 +49,33 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDestino)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(14, 8);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(471, 324);
+            this.tabControl1.Size = new System.Drawing.Size(708, 371);
             this.tabControl1.TabIndex = 1;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.tbxCosto2);
             this.tabPage1.Controls.Add(this.label2);
@@ -82,10 +89,9 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(5);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(5);
-            this.tabPage1.Size = new System.Drawing.Size(463, 291);
+            this.tabPage1.Size = new System.Drawing.Size(700, 338);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -150,7 +156,7 @@
             // 
             this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(232, 243);
+            this.btnCancelar.Location = new System.Drawing.Point(210, 288);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(78, 29);
             this.btnCancelar.TabIndex = 23;
@@ -162,7 +168,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(126, 243);
+            this.btnGuardar.Location = new System.Drawing.Point(104, 288);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(5);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(82, 29);
@@ -183,7 +189,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(5);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(5);
-            this.tabPage2.Size = new System.Drawing.Size(463, 291);
+            this.tabPage2.Size = new System.Drawing.Size(700, 338);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Lista";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -198,7 +204,7 @@
             // 
             // tbxBuscar
             // 
-            this.tbxBuscar.Location = new System.Drawing.Point(93, 69);
+            this.tbxBuscar.Location = new System.Drawing.Point(355, 25);
             this.tbxBuscar.Margin = new System.Windows.Forms.Padding(5);
             this.tbxBuscar.Name = "tbxBuscar";
             this.tbxBuscar.Size = new System.Drawing.Size(154, 26);
@@ -206,7 +212,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(280, 69);
+            this.btnBuscar.Location = new System.Drawing.Point(541, 21);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(5);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(125, 35);
@@ -227,15 +233,22 @@
             // 
             // dgvDestino
             // 
+            this.dgvDestino.AllowUserToAddRows = false;
+            this.dgvDestino.AllowUserToDeleteRows = false;
             this.dgvDestino.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDestino.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvDestino.Location = new System.Drawing.Point(24, 114);
             this.dgvDestino.Margin = new System.Windows.Forms.Padding(5);
             this.dgvDestino.Name = "dgvDestino";
+            this.dgvDestino.ReadOnly = true;
             this.dgvDestino.RowHeadersVisible = false;
+            this.dgvDestino.RowHeadersWidth = 200;
+            this.dgvDestino.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvDestino.RowTemplate.Height = 33;
             this.dgvDestino.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDestino.Size = new System.Drawing.Size(381, 111);
+            this.dgvDestino.Size = new System.Drawing.Size(651, 214);
             this.dgvDestino.TabIndex = 0;
+            this.dgvDestino.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDestino_CellContentClick);
             this.dgvDestino.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDestino_CellMouseDoubleClick);
             // 
             // contextMenuStrip1
@@ -244,29 +257,51 @@
             this.modificarToolStripMenuItem,
             this.eliminarToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(118, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(126, 48);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::aerolinea.Properties.Resources.machu_picchu;
+            this.pictureBox1.Location = new System.Drawing.Point(333, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(346, 298);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(700, 338);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Salir";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // Destino
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 343);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(736, 393);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Destino";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -279,6 +314,7 @@
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDestino)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -305,6 +341,8 @@
         private System.Windows.Forms.TextBox tbxCosto2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbxCosto1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TabPage tabPage3;
 
     }
 }

@@ -20,25 +20,37 @@ namespace Aerolinea_LogicaNegocio
           _boletoDal.Insertar(aux);
       }
 
-      /*
-         for (int j = 0; j < ocupados.Rows.Count; j++)
-                {
-                    if (aux.Numero == (int)ocupados.Rows[j].ItemArray[0])
-                    {
-                        aux.Estado = EstadoAsiento.Ocupado;
-                    }
-                }
-      */
-      public ArrayList AsientoDisponibles()
+      public ArrayList AsientoDisponibles(int id)
       {
           EBoleto aux = new EBoleto();
           ArrayList lista = new ArrayList();
-          var ocupados = _boletoDal.Obtener(aux, "Asiento");
+          var ocupados = _boletoDal.ObtenerVueloAsientos(id);
           for (int i = 0; i < ocupados.Rows.Count; i++)
           {
-              lista.Add((int)ocupados.Rows[i].ItemArray[0]);    
+              lista.Add((int)ocupados.Rows[i].ItemArray[0]);
           }
           return lista;
+      }
+
+      public DataTable obtenerTodos(EBoleto aux, DateTime fec1, DateTime fec2)
+      {
+          return _boletoDal.ObtenerTodos(aux,fec1,fec2);
+         // return _boletoDal.SelectAll(aux);
+      }
+
+      public void Eliminar(EBoleto aux, int id)
+      {
+          _boletoDal.Delete(aux, id);
+      }
+
+      public void Modificar(EBoleto aux)
+      {
+          _boletoDal.Update(aux);
+      }
+
+      public unknowtype ObtenerPorId<unknowtype>(unknowtype Entitie, int id)
+      {
+          return _boletoDal.ObtenerPorId(Entitie, id);
       }
     }
 }

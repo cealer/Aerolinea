@@ -14,9 +14,9 @@ namespace aerolinea.Formularios
 {
     public partial class Avion : Form
     {
-       public static EAvion aux;
+        public static EAvion aux;
         //
-        private readonly AvionBOL  _avionBol = new AvionBOL();
+        private readonly AvionBOL _avionBol = new AvionBOL();
 
         //Evita que se pueda abrir el mismo formulario 2 veces
         private static Avion m_FormDefInstance;
@@ -39,12 +39,14 @@ namespace aerolinea.Formularios
             InitializeComponent();
         }
 
-        void LlenarDatagriew() {
+        void LlenarDatagriew()
+        {
             dgvAvion.DataSource = _avionBol.ObtenerTodos(aux);
             dgvAvion.Columns[0].Visible = false;
         }
 
-        void Limpiar() {
+        void Limpiar()
+        {
             tbxBusqueda.Clear();
             tbxCap.Clear();
             tbxEnve.Clear();
@@ -60,18 +62,18 @@ namespace aerolinea.Formularios
         }
 
         public static bool enviarDatos = false;
-       
+
         void OpcionesVistaBuscar()
         {
             tabControl1.TabPages.RemoveAt(0);
             cmsOperaciones.Enabled = false;
             cmsOperaciones.Dispose();
         }
-        
+
         private void Avion_Load(object sender, EventArgs e)
         {
 
-            if (enviarDatos==true)
+            if (enviarDatos == true)
             {
                 OpcionesVistaBuscar();
             }
@@ -82,7 +84,7 @@ namespace aerolinea.Formularios
             //Agregando items al combobox
             foreach (var item in lista)
             {
-            cboBusqueda.Items.Add(item);
+                cboBusqueda.Items.Add(item);
             }
             //Llenando el datagridview
             LlenarDatagriew();
@@ -92,36 +94,40 @@ namespace aerolinea.Formularios
         {
             try
             {
-                    aux.Aerolinea = tbxNomAero.Text;
-                    aux.Capacidad = int.Parse(tbxCap.Text);
-                    aux.Despliegue = float.Parse(tbxPesoMax.Text);
-                    aux.Envergadura = float.Parse(tbxEnve.Text);
-                    aux.Longitud = float.Parse(tbxLon.Text);
-                    aux.Modelo = tbxModel.Text;
-                    aux.Salida = int.Parse(tbxSalida.Text);
-                    aux.Sanitarios = int.Parse(tbxSani.Text);
+                aux.Aerolinea = tbxNomAero.Text;
+                aux.Capacidad = int.Parse(tbxCap.Text);
+                aux.Despliegue = float.Parse(tbxPesoMax.Text);
+                aux.Envergadura = float.Parse(tbxEnve.Text);
+                aux.Longitud = float.Parse(tbxLon.Text);
+                aux.Modelo = tbxModel.Text;
+                aux.Salida = int.Parse(tbxSalida.Text);
+                aux.Sanitarios = int.Parse(tbxSani.Text);
 
-                    if (aux.IdAvion > 0)
-                    {
-                        _avionBol.Modificar(aux);
-                        MessageBox.Show("Modificado");
-                    }
-                    else
-                    {
-                        _avionBol.Registrar(aux);
-                        MessageBox.Show("Agregado");
-                    }
+                if (aux.IdAvion > 0)
+                {
+                    _avionBol.Modificar(aux);
+                    MessageBox.Show("Modificado");
+                }
+                else
+                {
+                    _avionBol.Registrar(aux);
+                    MessageBox.Show("Agregado");
+                }
 
-                    Limpiar();
-                    LlenarDatagriew();
-                    tabControl1.SelectedIndex = 1;
+                Limpiar();
+                LlenarDatagriew();
+                tabControl1.SelectedIndex = 1;
+            }
+            catch (CustomException ex)
+            {
+                MessageBox.Show(this, ex.Message, "No se pudo guardar.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
 
-            }
+        }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -131,7 +137,7 @@ namespace aerolinea.Formularios
                 EAvion aux = new EAvion();
                 dgvAvion.DataSource = _avionBol.ObtenerCondicion(aux, cboBusqueda.SelectedItem.ToString(), busqueda);
                 dgvAvion.Columns[0].Visible = false;
-                Limpiar();    
+                Limpiar();
             }
             else
             {
@@ -143,16 +149,16 @@ namespace aerolinea.Formularios
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             aux = new EAvion();
-            int id=Convert.ToInt32(dgvAvion.CurrentRow.Cells[0].Value.ToString());
-            _avionBol.Eliminar(aux,id);
+            int id = Convert.ToInt32(dgvAvion.CurrentRow.Cells[0].Value.ToString());
+            _avionBol.Eliminar(aux, id);
             MessageBox.Show("Eliminado");
             LlenarDatagriew();
         }
-    
+
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int idAvion =Convert.ToInt32(dgvAvion.CurrentRow.Cells[0].Value);
-            aux = _avionBol.ObtenerPorId(aux,idAvion);
+            int idAvion = Convert.ToInt32(dgvAvion.CurrentRow.Cells[0].Value);
+            aux = _avionBol.ObtenerPorId(aux, idAvion);
             tbxNomAero.Text = aux.Aerolinea;
             tbxModel.Text = aux.Modelo;
             tbxCap.Text = aux.Capacidad.ToString();
@@ -160,7 +166,7 @@ namespace aerolinea.Formularios
             tbxEnve.Text = aux.Envergadura.ToString();
             tbxPesoMax.Text = aux.Despliegue.ToString();
             tbxSalida.Text = aux.Salida.ToString();
-            tbxSani.Text = aux.Sanitarios.ToString();      
+            tbxSani.Text = aux.Sanitarios.ToString();
             tabControl1.SelectedIndex = 0;
         }
 
@@ -171,13 +177,22 @@ namespace aerolinea.Formularios
 
         private void dgvAvion_DoubleClick(object sender, EventArgs e)
         {
-            if (enviarDatos==true)
+            if (enviarDatos == true)
             {
-            enviarDatos = false;
-            int id = Convert.ToInt32(dgvAvion.CurrentRow.Cells[0].Value.ToString());
-            aux = _avionBol.ObtenerPorId(aux, id);
-            this.Close();   
+                enviarDatos = false;
+                int id = Convert.ToInt32(dgvAvion.CurrentRow.Cells[0].Value.ToString());
+                aux = _avionBol.ObtenerPorId(aux, id);
+                this.Close();
             }
         }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 2)
+            {
+
+                this.Close();
+            }
         }
     }
+}

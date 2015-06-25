@@ -25,3 +25,16 @@ C:\Users\Cesar\Desktop\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-Ent
 C:\Users\Cesar\Desktop\aerolinea\Aerolinea-LogicaNegocio\obj\Debug\Aerolinea-LogicaNegocio.csprojResolveAssemblyReference.cache
 C:\Users\Cesar\Desktop\aerolinea\Aerolinea-LogicaNegocio\obj\Debug\Aerolinea-LogicaNegocio.dll
 C:\Users\Cesar\Desktop\aerolinea\Aerolinea-LogicaNegocio\obj\Debug\Aerolinea-LogicaNegocio.pdb
+C:\Users\Cesar\Documents\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-LogicaNegocio.dll
+C:\Users\Cesar\Documents\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-LogicaNegocio.pdb
+C:\Users\Cesar\Documents\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-AccesoDatos.dll
+C:\Users\Cesar\Documents\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-Entidades.dll
+C:\Users\Cesar\Documents\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-AccesoDatos.pdb
+C:\Users\Cesar\Documents\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\Aerolinea-Entidades.pdb
+C:\Users\Cesar\Documents\aerolinea\Aerolinea-LogicaNegocio\obj\Debug\Aerolinea-LogicaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\Cesar\Documents\aerolinea\Aerolinea-LogicaNegocio\obj\Debug\Aerolinea-LogicaNegocio.dll
+C:\Users\Cesar\Documents\aerolinea\Aerolinea-LogicaNegocio\obj\Debug\Aerolinea-LogicaNegocio.pdb
+C:\Users\Cesar\Documents\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\BCrypt.Net.dll
+C:\Users\Cesar\Documents\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\BCrypt.Net.pdb
+C:\Users\Cesar\Documents\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\BCrypt.Net.xml
+C:\Users\Cesar\Documents\aerolinea\Aerolinea-LogicaNegocio\bin\Debug\FluentValidation.dll

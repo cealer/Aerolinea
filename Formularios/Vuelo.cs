@@ -90,10 +90,13 @@ namespace aerolinea.Formularios
             LlenarDatagriew();
             tabControl1.SelectedIndex = 1;
             }
-            catch (Exception)
+            catch (CustomException ex)
             {
-
-                MessageBox.Show("Verifique los datos");
+                MessageBox.Show(this, ex.Message, "No se pudo guardar.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Verifique los datos");
             }
         }
 

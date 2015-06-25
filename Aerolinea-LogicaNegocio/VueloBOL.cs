@@ -1,5 +1,7 @@
 ﻿using Aerolinea_AccesoDatos;
 using Aerolinea_Entidades;
+using Aerolinea_LogicaNegocio.RulesValidation;
+using FluentValidation.Results;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,12 +15,30 @@ namespace Aerolinea_LogicaNegocio
   public class VueloBOL
     {
       private VueloDAL _vueloDal = new VueloDAL();
-        //El uso de la clase StringBuilder nos ayudara a devolver los mensajes de las validaciones
-        public readonly StringBuilder stringBuilder = new StringBuilder();
+      readonly VueloValidator _vueloValidator = new VueloValidator();
+
+      public readonly StringBuilder str = new StringBuilder();
+
 
         public void Registrar(EVuelo aux)
         {
-            _vueloDal.Insertar(aux);
+            ValidationResult result = _vueloValidator.Validate(aux);
+
+            if (result.IsValid)
+            {
+                _vueloDal.Insertar(aux); 
+            }
+            else
+            {
+                var errores = result.Errors;
+
+                foreach (var item in result.Errors)
+                {
+                    str.AppendLine(item.ErrorMessage);
+                }
+                throw new CustomException(str.ToString());
+            }
+
         }
 
         public ArrayList LlenarCombo(EVuelo aux)
@@ -46,9 +66,9 @@ namespace Aerolinea_LogicaNegocio
             _vueloDal.Update(aux);
         }
 
-        public DataTable ObtenerBuscar(EVuelo aux, string campos, string where)
+        public DataTable ObtenerBuscar(EVuelo aux, string campos, string where,string datos)
         {
-            return _vueloDal.SelectAllCondicional(aux, campos, where);
+            return _vueloDal.SelectAllCondicional(aux, campos, where,datos);
         }
 
         public unknowtype ObtenerPorId<unknowtype>(unknowtype Entitie, int id)

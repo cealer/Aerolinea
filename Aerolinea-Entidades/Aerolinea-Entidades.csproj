@@ -39,7 +39,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EAeropuerto.cs" />
     <Compile Include="EAsiento.cs" />
     <Compile Include="EAvion.cs" />
     <Compile Include="EBoleto.cs" />

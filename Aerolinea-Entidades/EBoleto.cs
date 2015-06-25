@@ -13,7 +13,6 @@ namespace Aerolinea_Entidades
      public int IdVuelo { get; set; }
      public int Asiento { get; set; }
      public double Costo { get; set; }
-     public int IdAeropuerto { get; set; }
      public int IdPersona { get; set; }
 
     }

@@ -35,6 +35,9 @@
     <Reference Include="IrisSkin2">
       <HintPath>..\..\..\..\Desktop\Componentes Graficos Vb2\SKIN NET 2010 WIN 7\SkinVS.NET\IrisSkin2.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\Desktop\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -56,17 +59,11 @@
     <Compile Include="avion.Designer.cs">
       <DependentUpon>avion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\fAeropuerto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\fAeropuerto.Designer.cs">
-      <DependentUpon>fAeropuerto.cs</DependentUpon>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\fAsiento.cs">
       <SubType>Form</SubType>
@@ -92,11 +89,11 @@
     <Compile Include="Formularios\Destino.Designer.cs">
       <DependentUpon>Destino.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Pasajero.cs">
+    <Compile Include="Formularios\Persona.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Pasajero.Designer.cs">
-      <DependentUpon>Pasajero.cs</DependentUpon>
+    <Compile Include="Formularios\Persona.Designer.cs">
+      <DependentUpon>Persona.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\TipoPersona.cs">
       <SubType>Form</SubType>
@@ -110,6 +107,12 @@
     <Compile Include="Formularios\Usuario.Designer.cs">
       <DependentUpon>Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\UsuarioMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\UsuarioMantenimiento.Designer.cs">
+      <DependentUpon>UsuarioMantenimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Vuelo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,11 +124,8 @@
     <EmbeddedResource Include="avion.resx">
       <DependentUpon>avion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\fAeropuerto.resx">
-      <DependentUpon>fAeropuerto.cs</DependentUpon>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\fAsiento.resx">
       <DependentUpon>fAsiento.cs</DependentUpon>
@@ -139,11 +139,17 @@
     <EmbeddedResource Include="Formularios\Destino.resx">
       <DependentUpon>Destino.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Pasajero.resx">
-      <DependentUpon>Pasajero.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Persona.resx">
+      <DependentUpon>Persona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TipoPersona.resx">
       <DependentUpon>TipoPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\UsuarioMantenimiento.resx">
+      <DependentUpon>UsuarioMantenimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Vuelo.resx">
       <DependentUpon>Vuelo.cs</DependentUpon>
@@ -156,6 +162,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -186,6 +193,60 @@
       <Project>{f49aa114-90a4-4b74-a7a7-6b898022dbf0}</Project>
       <Name>Aerolinea-LogicaNegocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\T6720120627largeNote8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\airplane_mode_on_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comm-capacitacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\120px-Administrador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_alumno_privado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\towards-the-sunset-1920x1200-wallpaper-amanecer-visto-desde-un-avión-vistas-aéreas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empleado-1186693.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\retrato-femenino-del-icono-del-perfil-de-la-empresaria-plano-47075260.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\al.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\machu-picchu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hombre-usuario-icono.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\airplane_mode_on_2561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\travel-tickets-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_11785128-Two-plane-tickets-and-plane-icon.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

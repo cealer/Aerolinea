@@ -1,5 +1,6 @@
 ﻿using Aerolinea_AccesoDatos;
 using Aerolinea_Entidades;
+using Aerolinea_LogicaNegocio.RulesValidation;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,18 +8,35 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FluentValidation.Results;
 
 namespace Aerolinea_LogicaNegocio
 {
-   public class DestinoBOL
+    public class DestinoBOL
     {
         private DestinoDAL _destinoDal = new DestinoDAL();
-        //El uso de la clase StringBuilder nos ayudara a devolver los mensajes de las validaciones
+
         public readonly StringBuilder stringBuilder = new StringBuilder();
 
+        readonly DestinoValidator _DestinoValidator = new DestinoValidator();
+        
         public void Registrar(EDestino aux)
         {
-            _destinoDal.Insertar(aux);
+            ValidationResult result = _DestinoValidator.Validate(aux);
+            if (result.IsValid)
+            {
+                _destinoDal.Insertar(aux); 
+            }
+            else
+            {
+                var errores = result.Errors;
+
+                foreach (var item in result.Errors)
+                {
+                    stringBuilder.AppendLine(item.ErrorMessage);
+                }
+                throw new CustomException(stringBuilder.ToString());
+            }
         }
 
         public ArrayList LlenarCombo(EDestino aux)
@@ -47,7 +65,7 @@ namespace Aerolinea_LogicaNegocio
         {
             _destinoDal.Update(aux);
         }
-       
+
         public unknowtype ObtenerPorId<unknowtype>(unknowtype Entitie, int id)
         {
             return _destinoDal.ObtenerPorId(Entitie, id);

@@ -58,6 +58,7 @@
             this.cmsOperaciones = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -69,15 +70,19 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(876, 432);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
+            this.tabPage1.BackgroundImage = global::aerolinea.Properties.Resources.towards_the_sunset_1920x1200_wallpaper_amanecer_visto_desde_un_avión_vistas_aéreas;
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage1.Controls.Add(this.tbxSani);
             this.tabPage1.Controls.Add(this.tbxSalida);
             this.tabPage1.Controls.Add(this.tbxPesoMax);
@@ -106,21 +111,21 @@
             // 
             // tbxSani
             // 
-            this.tbxSani.Location = new System.Drawing.Point(239, 268);
+            this.tbxSani.Location = new System.Drawing.Point(647, 211);
             this.tbxSani.Name = "tbxSani";
             this.tbxSani.Size = new System.Drawing.Size(132, 26);
             this.tbxSani.TabIndex = 43;
             // 
             // tbxSalida
             // 
-            this.tbxSalida.Location = new System.Drawing.Point(239, 237);
+            this.tbxSalida.Location = new System.Drawing.Point(247, 201);
             this.tbxSalida.Name = "tbxSalida";
             this.tbxSalida.Size = new System.Drawing.Size(132, 26);
             this.tbxSalida.TabIndex = 42;
             // 
             // tbxPesoMax
             // 
-            this.tbxPesoMax.Location = new System.Drawing.Point(239, 203);
+            this.tbxPesoMax.Location = new System.Drawing.Point(647, 152);
             this.tbxPesoMax.Name = "tbxPesoMax";
             this.tbxPesoMax.Size = new System.Drawing.Size(132, 26);
             this.tbxPesoMax.TabIndex = 41;
@@ -128,7 +133,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 268);
+            this.label8.Location = new System.Drawing.Point(426, 211);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(174, 20);
             this.label8.TabIndex = 40;
@@ -137,7 +142,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 237);
+            this.label2.Location = new System.Drawing.Point(30, 201);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(201, 20);
             this.label2.TabIndex = 39;
@@ -146,7 +151,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 203);
+            this.label1.Location = new System.Drawing.Point(426, 152);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(196, 20);
             this.label1.TabIndex = 38;
@@ -154,35 +159,35 @@
             // 
             // tbxEnve
             // 
-            this.tbxEnve.Location = new System.Drawing.Point(239, 167);
+            this.tbxEnve.Location = new System.Drawing.Point(247, 146);
             this.tbxEnve.Name = "tbxEnve";
             this.tbxEnve.Size = new System.Drawing.Size(132, 26);
             this.tbxEnve.TabIndex = 37;
             // 
             // tbxLon
             // 
-            this.tbxLon.Location = new System.Drawing.Point(239, 131);
+            this.tbxLon.Location = new System.Drawing.Point(647, 87);
             this.tbxLon.Name = "tbxLon";
             this.tbxLon.Size = new System.Drawing.Size(132, 26);
             this.tbxLon.TabIndex = 36;
             // 
             // tbxCap
             // 
-            this.tbxCap.Location = new System.Drawing.Point(239, 99);
+            this.tbxCap.Location = new System.Drawing.Point(247, 84);
             this.tbxCap.Name = "tbxCap";
             this.tbxCap.Size = new System.Drawing.Size(132, 26);
             this.tbxCap.TabIndex = 35;
             // 
             // tbxModel
             // 
-            this.tbxModel.Location = new System.Drawing.Point(239, 65);
+            this.tbxModel.Location = new System.Drawing.Point(647, 35);
             this.tbxModel.Name = "tbxModel";
             this.tbxModel.Size = new System.Drawing.Size(132, 26);
             this.tbxModel.TabIndex = 32;
             // 
             // tbxNomAero
             // 
-            this.tbxNomAero.Location = new System.Drawing.Point(239, 26);
+            this.tbxNomAero.Location = new System.Drawing.Point(247, 32);
             this.tbxNomAero.Name = "tbxNomAero";
             this.tbxNomAero.Size = new System.Drawing.Size(132, 26);
             this.tbxNomAero.TabIndex = 31;
@@ -190,7 +195,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 167);
+            this.label7.Location = new System.Drawing.Point(30, 146);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(121, 20);
             this.label7.TabIndex = 30;
@@ -199,7 +204,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 131);
+            this.label6.Location = new System.Drawing.Point(426, 87);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 20);
             this.label6.TabIndex = 29;
@@ -208,7 +213,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 99);
+            this.label5.Location = new System.Drawing.Point(30, 87);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 20);
             this.label5.TabIndex = 28;
@@ -217,7 +222,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 65);
+            this.label4.Location = new System.Drawing.Point(426, 35);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 20);
             this.label4.TabIndex = 27;
@@ -226,7 +231,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 29);
+            this.label3.Location = new System.Drawing.Point(26, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(187, 20);
             this.label3.TabIndex = 25;
@@ -236,7 +241,7 @@
             // 
             this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(467, 94);
+            this.btnCancelar.Location = new System.Drawing.Point(498, 309);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(87, 31);
@@ -249,7 +254,7 @@
             // btnOperacion
             // 
             this.btnOperacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOperacion.Location = new System.Drawing.Point(467, 148);
+            this.btnOperacion.Location = new System.Drawing.Point(322, 309);
             this.btnOperacion.Name = "btnOperacion";
             this.btnOperacion.Size = new System.Drawing.Size(87, 31);
             this.btnOperacion.TabIndex = 22;
@@ -260,6 +265,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackgroundImage = global::aerolinea.Properties.Resources.towards_the_sunset_1920x1200_wallpaper_amanecer_visto_desde_un_avión_vistas_aéreas;
+            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.cboBusqueda);
             this.tabPage2.Controls.Add(this.tbxBusqueda);
@@ -326,28 +333,41 @@
             this.modificarToolStripMenuItem,
             this.eliminarToolStripMenuItem});
             this.cmsOperaciones.Name = "cmsOperaciones";
-            this.cmsOperaciones.Size = new System.Drawing.Size(118, 48);
+            this.cmsOperaciones.Size = new System.Drawing.Size(126, 48);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(868, 399);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Salir";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // Avion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(900, 456);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Avion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Avion";
@@ -394,5 +414,6 @@
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }
